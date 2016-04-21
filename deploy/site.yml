@@ -1,0 +1,12 @@
+---
+- hosts: proxy_servers
+  roles:
+    - squid
+    - stunnel
+  vars:
+    - stunnel_server: true
+- hosts: proxy_clients
+  roles:
+    - stunnel
+  vars:
+    - stunnel_server_host: 

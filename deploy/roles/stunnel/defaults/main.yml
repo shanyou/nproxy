@@ -1,0 +1,9 @@
+---
+# defaults file for stunnel
+# if stunnel run as server or client
+stunnel_server_host: localhost
+stunnel_server: false
+stunnel_log: /var/log/stunnel.log
+stunnel_cert: /etc/stunnel/stunnel.pem
+stunnel_squid_server_port: 3128
+stunnel_squid_listen_port: 4128

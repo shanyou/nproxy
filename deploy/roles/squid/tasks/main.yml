@@ -1,0 +1,8 @@
+---
+# install squid
+- name: Install squid by yum
+  include: install.yml
+  when: "ansible_local.squid is undefined or squid.deploy > ansible_local.squid.deploy"
+# config squid
+- name: Config squid
+  include: config.yml

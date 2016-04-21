@@ -1,0 +1,4 @@
+[proxy_servers]
+cache5.molitv.cn
+[proxy_clients]
+redis4.molitv.cn

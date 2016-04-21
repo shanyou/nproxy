@@ -1,0 +1,4 @@
+---
+# handlers file for stunnel
+- name: restart stunnel
+  command: "/etc/init.d/stunnel restart"

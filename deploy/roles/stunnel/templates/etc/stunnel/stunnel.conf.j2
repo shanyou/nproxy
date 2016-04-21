@@ -1,0 +1,15 @@
+{% if stunnel_server -%}
+client = no
+{% else %}
+client = yes
+{% endif %}
+output = {{ stunnel_log }}
+
+[squid]
+accept = {{ stunnel_squid_listen_port }}
+{% if stunnel_server -%}
+connect = 127.0.0.1:{{ stunnel_squid_server_port }}
+{% else %}
+connect = {{ stunnel_server_host }}:{{ stunnel_squid_listen_port }}
+{% endif %}
+cert = {{ stunnel_cert }}
